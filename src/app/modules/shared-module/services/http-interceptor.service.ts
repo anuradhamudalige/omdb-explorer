@@ -6,6 +6,10 @@ import { catchError, map } from 'rxjs/operators';
 import { Message } from '../models/message';
 import { MessageTypes } from '../enums/enum';
 
+/**
+ * This service will capture HTTP errors and validate HTTP request upon demand.
+ * In this case we will use it to handle errors
+ */
 @Injectable({
   providedIn: 'root'
 })

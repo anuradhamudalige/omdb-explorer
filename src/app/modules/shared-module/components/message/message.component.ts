@@ -1,4 +1,4 @@
-import { Component, OnDestroy, OnInit } from '@angular/core';
+import { Component, OnDestroy } from '@angular/core';
 import { MessageService } from '../../services/message.service';
 import { Subscription } from 'rxjs';
 import { Message } from '../../models/message';
@@ -7,7 +7,7 @@ import { Message } from '../../models/message';
   selector: 'app-message',
   templateUrl: './message.component.html'
 })
-export class MessageComponent implements OnInit, OnDestroy {
+export class MessageComponent implements OnDestroy {
 
   private subscription = new Subscription();
   value: Message | null = null;
@@ -24,10 +24,6 @@ export class MessageComponent implements OnInit, OnDestroy {
         this.value = null;
       })
     );
-  }
-
-  ngOnInit(): void {
-
   }
 
   ngOnDestroy(): void {
