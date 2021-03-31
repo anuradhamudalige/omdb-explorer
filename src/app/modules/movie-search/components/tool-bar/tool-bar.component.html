@@ -1,0 +1,13 @@
+<div class="toolbar">
+  <div class="content">
+    <div class="toolbar-group-left">
+      <p>OMDB Search</p>
+    </div>
+
+    <div class="toolbar-group-right">
+      <label>Search a movie</label>
+      <input #inputElement type="text" placeholder="Search a movie" (keyup.enter)="onSearchClicked(inputElement.value)"/>
+      <button (click)="onSearchClicked(inputElement.value)">Search</button>
+    </div>
+  </div>
+</div>
