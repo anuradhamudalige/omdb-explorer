@@ -6,6 +6,7 @@ $font-size: 12px;
 html, body, .mat-typography {
   height: 100%;
   font-size: $font-size;
+  overflow: hidden;
 
   h5, p {
     margin: 0;
@@ -16,6 +17,7 @@ body {
   margin: 0;
   font-family: Roboto, "Helvetica Neue", sans-serif;
 }
+
 /***** Global elements *****/
 button {
   text-transform: uppercase;
@@ -67,6 +69,7 @@ mat-paginator {
 
 .message {
   text-align: center;
+
   p {
     margin: auto;
     width: 50%;
@@ -136,6 +139,11 @@ mat-paginator {
 
 /*** Flex end ***/
 
+/**** Movie List *****/
+.container {
+  height: calc(100vh - 130px);
+  overflow: scroll;
+}
 
 /*** Movie card ***/
 app-movie {
@@ -250,6 +258,7 @@ section {
 
   .toolbar-group-right {
     float: right;
+
     label {
       @media screen and (max-width: 700px) {
         display: none;

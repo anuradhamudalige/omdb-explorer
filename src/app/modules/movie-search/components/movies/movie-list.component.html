@@ -1,3 +1,4 @@
-<div class="flex-container float-left">
-  <app-movie *ngFor="let result of searchResults" [summary]="result" class="flex-child" [ngClass]="result.class"></app-movie>
+<div class="container flex-container float-left">
+  <app-movie *ngFor="let result of searchResults" [summary]="result" class="flex-child"
+             [ngClass]="result.class"></app-movie>
 </div>
