@@ -5,6 +5,10 @@ import { MessageComponent } from './components/message/message.component';
 import { MessageService } from './services/message.service';
 import { MatPaginatorModule } from '@angular/material/paginator';
 
+/**
+ * This module includes shared modules throughout the application such as
+ * {@class MessageService, MatPaginatorModule}
+ */
 @NgModule({
   declarations: [MessageComponent],
   imports: [

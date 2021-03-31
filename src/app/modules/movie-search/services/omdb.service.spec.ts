@@ -8,6 +8,7 @@ import { HttpConnectionService } from '../../shared-module/services/http-connect
 
 describe('OmdbService', () => {
   let service: OmdbService;
+  let httpConnectionServiceMock: HttpConnectionService;
 
   beforeEach(() => {
     TestBed.configureTestingModule({
@@ -16,10 +17,21 @@ describe('OmdbService', () => {
       ]
     });
     service = TestBed.inject(OmdbService);
+    httpConnectionServiceMock = TestBed.inject(HttpConnectionService);
   });
 
   it('should be created', () => {
     expect(service).toBeTruthy();
+  });
+
+  it('should be call HTTP.get when search or getById is being called', () => {
+    spyOn(httpConnectionServiceMock, 'get').and.callThrough();
+
+    service.search('avengers');
+    service.getById('0');
+
+    expect(httpConnectionServiceMock.get).toHaveBeenCalledTimes(2);
+
   });
 });
 
