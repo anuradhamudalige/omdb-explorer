@@ -1,19 +1,31 @@
-import { Component, Injector, OnInit } from '@angular/core';
+import { Component, Injector, OnInit, ViewChild } from '@angular/core';
 import { OmdbService } from '../../services/omdb.service';
 import { SearchResults } from '../../models/search-results';
 import { MessageService } from '../../../shared-module/services/message.service';
 import { MessageTypes } from '../../../shared-module/enums/enum';
 import { Message } from '../../../shared-module/models/message';
-import { PageEvent } from '@angular/material/paginator';
+import { MatPaginator, PageEvent } from '@angular/material/paginator';
 
 @Component({
   selector: 'app-overview',
-  templateUrl: './overview.component.html'
+  templateUrl: './overview.component.html',
+  styleUrls: ['./overview.component.scss']
 })
 export class OverviewComponent implements OnInit {
+  get searchResults(): SearchResults | null {
+    return this._searchResults;
+  }
+
+  set searchResults(value: SearchResults | null) {
+    this._searchResults = value;
+    if (value?.pageIndex === 1) {
+      this.paginator?.firstPage();
+    }
+  }
 
   searchCriteria = '';
-  searchResults: SearchResults | null = null;
+  private _searchResults: SearchResults | null = null;
+  @ViewChild(MatPaginator) private paginator: MatPaginator | undefined;
 
   pageSize = 10;
 
@@ -29,10 +41,11 @@ export class OverviewComponent implements OnInit {
     this.addWelcomeMessage();
   }
 
-  onSearch(searchCriteria: string, pageIndex?: number): void {
+  onSearch(searchCriteria: string, pageIndex: number = 1): void {
     this.searchCriteria = searchCriteria;
     this.omdbService.search(searchCriteria, pageIndex).then((value: SearchResults) => {
       if (value.Response === 'True') {
+        value.pageIndex = pageIndex;
         this.searchResults = value;
       } else {
         this.onError(value.Error);

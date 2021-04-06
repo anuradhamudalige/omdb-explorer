@@ -1,4 +1,4 @@
-<div class="card flex-container">
+<div class="card flex-container movie">
   <div class="poster">
     <img *ngIf="summary.Poster !== 'N/A'" [hidden]="!showDefaultImg" alt="Movie Poster" [src]="summary.Poster" (load)="showDefaultImg = false">
     <img *ngIf="showDefaultImg" alt="default" src="../../../../../../assets/images/n_a.jpg">

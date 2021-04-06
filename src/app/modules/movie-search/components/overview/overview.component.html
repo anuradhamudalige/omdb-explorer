@@ -1,6 +1,6 @@
 <app-tool-bar (search)="onSearch($event)"></app-tool-bar>
 <div class="full-width">
-  <div class="content" style="margin-top: 20px">
+  <div class="content">
     <app-message></app-message>
     <app-movies *ngIf="searchResults" class="movies" [searchResults]="searchResults.Search"></app-movies>
     <mat-paginator *ngIf="searchResults" [length]="searchResults.totalResults"

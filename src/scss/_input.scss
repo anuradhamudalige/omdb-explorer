@@ -1,0 +1,15 @@
+@import "variables";
+
+input {
+  height: 28px;
+  font-size: 11px;
+  border: $border;
+  margin: 0 10px;
+  padding: 0 5px;
+
+  &:focus {
+    border: $border;
+    outline: none;
+  }
+
+}
