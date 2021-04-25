@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "omdb-rentman": {
+    "omdb-explorer": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -20,7 +20,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/omdb-rentman",
+            "outputPath": "dist/omdb-explorer",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -69,19 +69,19 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "omdb-rentman:build",
+            "browserTarget": "omdb-explorer:build",
             "port": 4000
           },
           "configurations": {
             "production": {
-              "browserTarget": "omdb-rentman:build:production"
+              "browserTarget": "omdb-explorer:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "omdb-rentman:build"
+            "browserTarget": "omdb-explorer:build"
           }
         },
         "test": {
@@ -119,16 +119,16 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "omdb-rentman:serve"
+            "devServerTarget": "omdb-explorer:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "omdb-rentman:serve:production"
+              "devServerTarget": "omdb-explorer:serve:production"
             }
           }
         }
       }
     }
   },
-  "defaultProject": "omdb-rentman"
+  "defaultProject": "omdb-explorer"
 }

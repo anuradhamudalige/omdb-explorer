@@ -25,7 +25,7 @@ module.exports = function (config) {
       suppressAll: true // removes the duplicated traces
     },
     coverageReporter: {
-      dir: require('path').join(__dirname, './coverage/omdb-rentman'),
+      dir: require('path').join(__dirname, './coverage/omdb-explorer'),
       subdir: '.',
       reporters: [
         { type: 'html' },
