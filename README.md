@@ -1,5 +1,4 @@
 # OMDB Explorer
-### by Anuradha Mudalige
 
 This project is created with Angular version 11.2.6.
 
@@ -26,3 +25,6 @@ This project is created with Angular version 11.2.6.
 ## Demo
 
 - Visit the [Demo](https://omdb-explorer.web.app/) page for showcase.
+
+## Developer
+Anuradha Mudalige
