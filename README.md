@@ -2,6 +2,9 @@
 
 ![omdb](https://media.giphy.com/media/am0sCg5VzHkiXr7t4q/giphy.gif)
 
+This project is create with Angular 11.2.6. It accepts movie title to search using the OMDB API and shows results page by page using pagination.
+Project uses Angular material for the pagination and everything else is build from scratch. Project is scalable and modularized.
+
 ##Instructions
 
 - You need to have your own API key for function this application for success via [OMDB](http://www.omdbapi.com)
