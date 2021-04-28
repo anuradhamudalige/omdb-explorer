@@ -21,4 +21,8 @@ This project is created with Angular version 11.2.6.
 ## Running unit tests
 
 - Run `npm run test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-- Run `npm run coverage` to execute the unit tests with coverage and collect the detailed report navigating `coverage/` directory.
+- Run `npm run coverage` to execute the unit tests with coverage and collect the detailed report navigating `coverage/` directory.the Demo
+
+## Demo
+
+- Visit the [Demo](https://omdb-explorer.web.app/) page for showcase.
