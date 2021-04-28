@@ -1,6 +1,6 @@
 # OMDB Explorer
 
-This project is created with Angular version 11.2.6.
+<p>This project is created with Angular version 11.2.6.</p>
 
 ##Instructions
 
