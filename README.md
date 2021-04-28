@@ -1,6 +1,6 @@
 # OMDB Explorer
 
-<p>This project is created with Angular version 11.2.6.</p>
+![omdb](https://media.giphy.com/media/am0sCg5VzHkiXr7t4q/giphy.gif)
 
 ##Instructions
 
