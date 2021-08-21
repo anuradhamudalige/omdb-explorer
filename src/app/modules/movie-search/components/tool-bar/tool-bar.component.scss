@@ -4,7 +4,7 @@
   display: flex;
   justify-content: space-between;
 
-  @media screen and (max-width: 700px) {
+  @media screen and (max-width: 767px) {
     width: 95%;
   }
 }
@@ -24,6 +24,23 @@
       padding: 0;
       line-height: 30px;
     }
+
+    p:first-child {
+      display: block;
+    }
+    p:nth-child(2) {
+      display: none;
+    }
+
+    @media screen and (max-width: 400px) {
+      p:first-child {
+        display: none;
+      }
+      p:nth-child(2) {
+        display: block;
+      }
+    }
+
   }
 
   .toolbar-group-right {
@@ -32,6 +49,51 @@
         display: none;
       }
     }
+
+    i.m-submit-button {
+      color: #347ef2;
+    }
+
+    button i {
+      display: none;
+    }
+
+    @media screen and (max-width: 767px) {
+
+      button {
+        font-size: 0;
+        padding: 0 0 20px;
+        background: none;
+      }
+
+      button i {
+        display: block;
+        top: -9px;
+        left: -7px;
+      }
+
+      input {
+        margin: 0 20px 0 10px;
+      }
+    }
+  }
+
+  .m-submit-button {
+    box-sizing: border-box;
+    position: relative;
+    display: block;
+    transform: scale(3);
+  }
+
+  .m-submit-button::before {
+    content: "";
+    display: block;
+    box-sizing: border-box;
+    width: 0;
+    height: 10px;
+    border-top: 5px solid transparent;
+    border-bottom: 5px solid transparent;
+    border-left: 6px solid;
   }
 
 }
