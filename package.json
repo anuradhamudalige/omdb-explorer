@@ -8,7 +8,7 @@
     "build:prod": "ng build --prod",
     "test": "ng test",
     "coverage": "ng test --code-coverage",
-    "deploy": "ng build --prod --base-href \"https://anuradhamudalige.github.io/omdb-explorer/\"",
+    "deploy": "ng build --prod --base-href \"/omdb-explorer/\"",
     "lint": "ng lint",
     "e2e": "ng e2e"
   },
