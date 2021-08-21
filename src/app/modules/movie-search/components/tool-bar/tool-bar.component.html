@@ -7,7 +7,7 @@
 
     <div class="toolbar-group-right">
       <label>Search a movie</label>
-      <input #inputElement type="text" placeholder="Search a movie" (keyup.enter)="onSearchClicked(inputElement.value)"/>
+      <input #inputElement type="text" placeholder="Search a movie" (keyup.enter)="onSearchClicked(inputElement.value)" autofocus="autofocus"/>
       <button (click)="onSearchClicked(inputElement.value)">Search<i class="m-submit-button"></i></button>
     </div>
   </div>
