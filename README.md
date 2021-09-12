@@ -7,7 +7,7 @@ Project uses Angular material for the pagination, and everything else is build f
 The site supports mobile and its responsive.
 
 
-##Instructions
+## Instructions
 
 - You need to have your own API key for function this application for success via [OMDB](http://www.omdbapi.com)
 - Once you have it place it on **two** `environment` files under `src/environments/` directory.
